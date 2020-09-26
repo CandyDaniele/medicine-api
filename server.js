@@ -1,5 +1,9 @@
 import express from 'express';
 import { medicineRouter } from './routes/medicineRouter.js';
+import cors from 'cors';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 import { db } from './models/index.js';
 
@@ -18,8 +22,14 @@ import { db } from './models/index.js';
 
 const app = express();
 
+app.use(
+  cors({
+    origin: "https://api-medicine-brazil.herokuapp.com/"
+  })
+)
+
 app.use(medicineRouter);
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 8081, () => {
   console.log('API started');
 });
