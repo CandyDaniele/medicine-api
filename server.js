@@ -8,7 +8,7 @@ dotenv.config();
 import { db } from './models/index.js';
 
 (async () => {
-  try{
+  try {
     await db.mongoose.connect(db.url, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
@@ -22,11 +22,7 @@ import { db } from './models/index.js';
 
 const app = express();
 
-app.use(
-  cors({
-    origin: "https://api-medicine-brazil.herokuapp.com/"
-  })
-)
+app.use(cors());
 
 app.use(medicineRouter);
 
