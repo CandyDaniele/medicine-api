@@ -3,6 +3,6 @@ import controller from '../controllers/medicineController.js';
 
 const app = express();
 
-app.get('/medicines', controller.getAllMedicines);
+app.get('/medicines', controller.getMedicines);
 
 export { app as medicineRouter};
