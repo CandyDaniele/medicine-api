@@ -1,0 +1,24 @@
+{
+  "name": "api-medicine",
+  "version": "1.0.0",
+  "description": "Desenvolvimento da API para o projeto Integrador do curso Front End Coding Facebook da Estação Hack na escola Digital House",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CandyDaniele/medicine-api.git"
+  },
+  "keywords": [
+    "dh",
+    "medicine",
+    "api"
+  ],
+  "author": "Daniele Lucas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CandyDaniele/medicine-api/issues"
+  },
+  "homepage": "https://github.com/CandyDaniele/medicine-api#readme"
+}
