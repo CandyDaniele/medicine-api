@@ -1,10 +1,9 @@
 import express from 'express';
+import { medicineRouter } from './routes/medicineRouter.js';
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('API em execucao');
-});
+app.use(medicineRouter);
 
 app.listen(3000, () => {
   console.log('API started');
