@@ -23,5 +23,6 @@
   "homepage": "https://github.com/CandyDaniele/medicine-api#readme",
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "type": "module"
 }
