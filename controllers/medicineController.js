@@ -9,7 +9,21 @@ const getMedicines = async (req, res) => {
       { produto: { $regex: '.*' + name + '.*' } },
     ],
   });
-  res.send(medicine);
+
+  const result = {
+    data: [],
+    message: ""
+  };
+
+  if(medicine.length > 0) {
+    result.data = medicine;
+    res.status(200).send(result);
+  }else{
+    result.message = "Nenhum resultado encontrado";
+    res.status(404).send(result);
+  }
+
+
 };
 
 export default { getMedicines };
